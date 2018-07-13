@@ -6,21 +6,22 @@ msgstr ""
 "Project-Id-Version: Python 3.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-28 15:29+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2018-07-12 21:55+0200\n"
 "Language-Team: FRENCH <traductions@lists.afpy.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.0.8\n"
 
 #: ../Doc/library/venv.rst:2
 msgid ":mod:`venv` --- Creation of virtual environments"
-msgstr ""
+msgstr ":mod:`venv` --- Création d'environnements virtuels"
 
 #: ../Doc/library/venv.rst:12
 msgid "**Source code:** :source:`Lib/venv/`"
-msgstr ""
+msgstr "**Source code:** :source:`Lib/venv/`"
 
 #: ../Doc/library/venv.rst:18
 msgid ""
@@ -31,10 +32,18 @@ msgid ""
 "have its own independent set of installed Python packages in its site "
 "directories."
 msgstr ""
+"Le module :mod:`venv` fournit une aide à la création d'«environnements "
+"virtuels» légers ayant leurs propres dossier site, optionnellement isolé du "
+"dossier site système. Chaque environnement virtuel à son propre binaire "
+"Python (ce qui autorise la création d'environnement à partir de différentes "
+"versions de Python) et peut avoir son propre ensemble de paquets Python à "
+"l'intérieur de son dossier site."
 
 #: ../Doc/library/venv.rst:24
 msgid "See :pep:`405` for more information about Python virtual environments."
 msgstr ""
+"Voir la :pep:`405` pour plus d'informations à propos des environnements "
+"virtuels Python."
 
 #: ../Doc/library/venv.rst:27
 msgid ""
@@ -42,6 +51,9 @@ msgid ""
 "``python3 -m venv`` to help prevent any potential confusion as to which "
 "Python interpreter a virtual environment will be based on."
 msgstr ""
+"A partir de Python 3.6, le script ``pyvenv`` a été déprécié en faveur de la "
+"commande ``python3 -m venv`` pour éviter toute confusion sur la version de "
+"l'interpréteur Python sur laquelle l'environnement virtuel est basé."
 
 #: ../Doc/library/venv.rst:33
 msgid "Creating virtual environments"
@@ -52,6 +64,8 @@ msgid ""
 "Creation of :ref:`virtual environments <venv-def>` is done by executing the "
 "command ``venv``::"
 msgstr ""
+"La création d'::ref:`virtual environments <venv-def>` se fait en exécutant "
+"la commande ``venv``::"
 
 #: ../Doc/using/venv-create.inc:6
 msgid ""
@@ -64,6 +78,15 @@ msgid ""
 "packages`` subdirectory (on Windows, this is ``Lib\\site-packages``). If an "
 "existing directory is specified, it will be re-used."
 msgstr ""
+"Exécuter cette commande créé le répertoire cible (en créant tout les "
+"répertoires parents inexistants) et y place un fichier ``pyvenv.cfg`` "
+"contenant une clé ``home`` pointant sur l'installation Python depuis "
+"laquelle la commande à été éxécuté. Cela créé également un sous-dossier "
+"``bin`` (ou ``Scripts`` sous Windows) contenant une copie du binaire (ou des "
+"binaires dans le cas de Windows) ``python`` ainsi qu'un sous-dossier "
+"(initialement vide) ``lib/pythonX.Y/site-packages`` (ou ``Lib\\site-"
+"package`` sous Windows). Si un répertoire existant est spécifié, il sera "
+"réutilisé."
 
 #: ../Doc/using/venv-create.inc:15
 msgid ""
@@ -93,29 +116,35 @@ msgstr ""
 
 #: ../Doc/using/venv-create.inc:30
 msgid "On Windows, invoke the ``venv`` command as follows::"
-msgstr ""
+msgstr "Sous windows, exécutez le commande ``venv`` de la manière suivante::"
 
 #: ../Doc/using/venv-create.inc:34
 msgid ""
 "Alternatively, if you configured the ``PATH`` and ``PATHEXT`` variables for "
 "your :ref:`Python installation <using-on-windows>`::"
 msgstr ""
+"Autrement, si vous avez configuré les variables ``PATH`` et ``PATHEXT`` pour "
+"votre :ref:`Python installation <using-on-windows>`::"
 
 #: ../Doc/using/venv-create.inc:39
 msgid "The command, if run with ``-h``, will show the available options::"
-msgstr ""
+msgstr "La commande exécutée avec ``-h`` montrera les options disponibles::"
 
 #: ../Doc/using/venv-create.inc:69
 msgid ""
 "Installs pip by default, added the ``--without-pip``  and ``--copies`` "
 "options"
 msgstr ""
+"Installe pip par défaut, ajoute les options ``--without-pip`` et ``--copies``"
 
 #: ../Doc/using/venv-create.inc:73
 msgid ""
 "In earlier versions, if the target directory already existed, an error was "
 "raised, unless the ``--clear`` or ``--upgrade`` option was provided."
 msgstr ""
+"Dans les versions précédentes, si le répertoire de destination existait "
+"déjà, une erreur était levée à moins que les options ``--clear`` ou ``--"
+"upgrade`` ne soient fournies."
 
 #: ../Doc/using/venv-create.inc:77
 msgid ""
@@ -123,12 +152,18 @@ msgid ""
 "packages`` key, set to ``true`` if ``venv`` is run with the ``--system-site-"
 "packages`` option, ``false`` otherwise."
 msgstr ""
+"Le fichier ``pyvenv.cfg`` créé inclut également la clé ``include-system-site-"
+"packages`` mise à ``true`` si ``venv`` est exécuté avec l'option ``--system-"
+"site-packages``, ``false`` sinon."
 
 #: ../Doc/using/venv-create.inc:81
 msgid ""
 "Unless the ``--without-pip`` option is given, :mod:`ensurepip` will be "
 "invoked to bootstrap ``pip`` into the virtual environment."
 msgstr ""
+"A moins que l'option ``--without-pip`` ne soit fournie, :mod:`ensurepip` "
+"sera exécuté pour initialiser ``pip`` à l'intérieur de l'environnement "
+"virtuel."
 
 #: ../Doc/using/venv-create.inc:84
 msgid ""
@@ -136,6 +171,9 @@ msgid ""
 "environment will be created, according to the given options, at each "
 "provided path."
 msgstr ""
+"Il est possible de fournir plusieurs chemin d'accès à ``venv``. Dans ce cas, "
+"un environnement virtuel identique sera créé à chaque chemin d'accès fourni "
+"à partir des options données."
 
 #: ../Doc/using/venv-create.inc:88
 msgid ""
@@ -143,6 +181,10 @@ msgid ""
 "script in the virtual environment's binary directory. The invocation of the "
 "script is platform-specific:"
 msgstr ""
+"Une fois qu'un environnement virtuel à été créé, il peut être «activé» en "
+"utilisant un script présent dans le répertoire des binaires de "
+"l'environnement virtuel. L’exécution de ce script est spécifique à chaque "
+"plateforme:"
 
 #: ../Doc/using/venv-create.inc:93
 msgid "Platform"
@@ -150,7 +192,7 @@ msgstr "Plateforme"
 
 #: ../Doc/using/venv-create.inc:93
 msgid "Shell"
-msgstr ""
+msgstr "Shell"
 
 #: ../Doc/using/venv-create.inc:93
 msgid "Command to activate virtual environment"
@@ -194,7 +236,7 @@ msgstr "cmd.exe"
 
 #: ../Doc/using/venv-create.inc:101
 msgid "C:\\\\> <venv>\\\\Scripts\\\\activate.bat"
-msgstr ""
+msgstr "C:\\\\> <venv>\\\\Scripts\\activate.bat"
 
 #: ../Doc/using/venv-create.inc:103
 msgid "PowerShell"
@@ -202,7 +244,7 @@ msgstr "PowerShell"
 
 #: ../Doc/using/venv-create.inc:103
 msgid "PS C:\\\\> <venv>\\\\Scripts\\\\Activate.ps1"
-msgstr ""
+msgstr "PS C:\\\\> <venv>\\\\Scripts\\\\Activate.ps1"
 
 #: ../Doc/using/venv-create.inc:106
 msgid ""
@@ -213,6 +255,14 @@ msgid ""
 "scripts installed in a virtual environment should be runnable without "
 "activating it, and run with the virtual environment's Python automatically."
 msgstr ""
+"Vous n'avez pas spécifiquement *besoin* d'activer un environnement; "
+"l'activation ajoute seulement le répertoire des binaires de l'environnement "
+"en tête de votre path afin que la commande ``python`` fasse appel à "
+"l'interpréteur Python de l'environnement virtuel et que vous puissiez "
+"exécuter les scripts installés sans utiliser leur chemin d'accès complet. "
+"Cependant, tout les scripts installés dans un environnement virtuel doivent "
+"pouvoir être exécuté, avec le Python de l'environnement automatiquement, "
+"sans avoir besoin de l'activer."
 
 #: ../Doc/using/venv-create.inc:113
 msgid ""
@@ -222,10 +272,16 @@ msgid ""
 "there are separate scripts called ``deactivate.bat`` and ``Deactivate.ps1`` "
 "which are installed when the virtual environment is created."
 msgstr ""
+"Vous pouvez désactiver un environnement virtuel en tapant ``deactivate`` "
+"dans votre shell. Le mécanisme exact est spécifique à chaque plateforme : "
+"par exemple, le script d'activation Bash définit une fonction "
+"``deactivate``, tandis que sous Windows les scripts ``deactivate.bat`` et "
+"``Deactivate.ps1`` sont installés lors de la création de l'environnement "
+"virtuel."
 
 #: ../Doc/using/venv-create.inc:119
 msgid "``fish`` and ``csh`` activation scripts."
-msgstr ""
+msgstr "Scripts d'activations pur ``fish`` et ``csh``."
 
 #: ../Doc/library/venv.rst:40
 msgid ""
@@ -235,12 +291,20 @@ msgid ""
 "installed in a \"system\" Python, i.e., one which is installed as part of "
 "your operating system."
 msgstr ""
+"Un environnement virtuel est un environnement Python tel que l'interpréteur "
+"Python, les bibliothèques et les scripts installés à l'intérieur sont isolés "
+"de ceux installés dans d'autres environnements virtuels ainsi que des "
+"bibliothèques installées au niveau « système », c'est-à-dire installées avec "
+"le système d'exploitation."
 
 #: ../Doc/library/venv.rst:46
 msgid ""
 "A virtual environment is a directory tree which contains Python executable "
 "files and other files which indicate that it is a virtual environment."
 msgstr ""
+"Un environnement virtuel est une arborescence de répertoires contenant des "
+"fichiers exécutables Python ainsi que d'autres fichiers indiquant que c'est "
+"un environnement virtuel."
 
 #: ../Doc/library/venv.rst:49
 msgid ""
@@ -249,6 +313,10 @@ msgid ""
 "environment is active, they install Python packages into the virtual "
 "environment without needing to be told to do so explicitly."
 msgstr ""
+"Les outils d'installation standards tels que ``Setuptools`` et ``pip`` "
+"s'adaptent aux environnements virtuels. En d'autres termes, lorsqu'un "
+"environnement virtuel est actif, ils installent les paquets Python à "
+"l'intérieur de celui-ci, sans avoir besoin de le préciser explicitement."
 
 #: ../Doc/library/venv.rst:54
 msgid ""
@@ -262,6 +330,16 @@ msgid ""
 "is the same as :attr:`sys.base_exec_prefix` (they all point to a non-virtual "
 "environment Python installation)."
 msgstr ""
+"Lorsqu'un environnement virtuel est actif (c'est-à-dire lorsque "
+"l'interpréteur Python de cet environnement virtuel est actif), les "
+"attributs :attr:`sys.prefix` et :attr:`sys.exec_prefix` pointent sur le "
+"répertoire de base de l'environnement virtuel, alors que attr:`sys."
+"base_prefix` et :attr:`sys.base_exec_prefix` pointent vers l'environnement "
+"(non virtuel) Python utilisé pour créer cet environnement virtuel. Si un "
+"environnement virtuel est inactif, alors :attr:`sys.prefix` est identique à :"
+"attr:`sys.base_prefix` et attr:`sys.exec_prefix` est identique à :attr:`sys."
+"base_exec_prefix` (ils pointent tous vers une installation d'un "
+"environnement Python non virtuel)."
 
 #: ../Doc/library/venv.rst:65
 msgid ""
@@ -270,6 +348,10 @@ msgid ""
 "prevent projects being inadvertently installed outside of the virtual "
 "environment."
 msgstr ""
+"Lorsqu'un environnement virtuel est actif, toutes les options qui changent "
+"le chemin d'accès à l'installation sont ignorées par tout les fichiers de "
+"configuration distutils pour éviter que des projets ne soient installés en "
+"dehors de l'environnement virtuel par inadvertance."
 
 #: ../Doc/library/venv.rst:70
 msgid ""
@@ -291,7 +373,7 @@ msgstr ""
 
 #: ../Doc/library/venv.rst:89
 msgid "API"
-msgstr ""
+msgstr "API"
 
 #: ../Doc/library/venv.rst:93
 msgid ""
@@ -300,12 +382,18 @@ msgid ""
 "customize environment creation according to their needs, the :class:"
 "`EnvBuilder` class."
 msgstr ""
+"Les méthodes de haut-niveau décrites ci-dessus utilisent la classe :class:"
+"`EnvBuilder` . C'est une API simple qui fournit des mécanismes pour "
+"permettre aux créateurs d'environnements virtuel tiers de customiser la "
+"création d'environnement selon leurs besoins"
 
 #: ../Doc/library/venv.rst:101
 msgid ""
 "The :class:`EnvBuilder` class accepts the following keyword arguments on "
 "instantiation:"
 msgstr ""
+"La classe :class:`EnvBuilder` acceptent les arguments suivant lors de son "
+"instanciation :"
 
 #: ../Doc/library/venv.rst:104
 msgid ""
@@ -313,12 +401,18 @@ msgid ""
 "Python site-packages should be available to the environment (defaults to "
 "``False``)."
 msgstr ""
+"`system_site_packages`` -- une valeur booléenne indiquant que le `site-"
+"packages` système devrait être disponible pour l'environnement (valeur par "
+"défaut : ``False``)."
 
 #: ../Doc/library/venv.rst:107
 msgid ""
 "``clear`` -- a Boolean value which, if true, will delete the contents of any "
 "existing target directory, before creating the environment."
 msgstr ""
+"``clear`` -- une valeur booléenne qui, si elle est vrai, supprimera le "
+"contenu de tout répertoire de destination existant avant de créer "
+"l'environnement."
 
 #: ../Doc/library/venv.rst:110
 msgid ""
@@ -326,6 +420,9 @@ msgid ""
 "Python binary (and any necessary DLLs or other binaries, e.g. ``pythonw."
 "exe``), rather than copying."
 msgstr ""
+"``symlinks`` -- une valeur booléenne indiquant si il faut tenter de créer un "
+"lien symbolique du binaire Python (ainsi que de toutes les DLLs et autres "
+"binaires nécessaires, par exemple ``pythonw.exe``), plutôt que de les copier."
 
 #: ../Doc/library/venv.rst:114
 msgid ""
@@ -340,6 +437,9 @@ msgid ""
 "the virtual environment. This uses :mod:`ensurepip` with the ``--default-"
 "pip`` option."
 msgstr ""
+"``with_pip`` -- une valeur booléenne, qui si elle vaut vrai, certifie que "
+"pip est installé à l'intérieur de l'environnement virtuel. Cela utilise :mod:"
+"`ensurepip` avec l'option ``--default-pip``."
 
 #: ../Doc/library/venv.rst:122
 msgid ""
@@ -347,24 +447,29 @@ msgid ""
 "(defaults to ``None`` which means directory name of the environment would be "
 "used)."
 msgstr ""
+"``prompt`` -- une chaîne de caractère à utiliser après que l'environnement "
+"virtuel soit activé (par défaut ``None``, ce qui correspond au nom du "
+"répertoire de l'environnement)."
 
 #: ../Doc/library/venv.rst:126 ../Doc/library/venv.rst:234
 msgid "Added the ``with_pip`` parameter"
-msgstr ""
+msgstr "Ajoute le paramètre ``with_pip``"
 
 #: ../Doc/library/venv.rst:129
 msgid "Added the ``prompt`` parameter"
-msgstr ""
+msgstr "Ajoute le paramètre ``prompt``"
 
 #: ../Doc/library/venv.rst:133
 msgid ""
 "Creators of third-party virtual environment tools will be free to use the "
 "provided ``EnvBuilder`` class as a base class."
 msgstr ""
+"Les créateurs d'outils d'environnements virtuel tiers sont libres d'utiliser "
+"la classe ``EnvBuilder`` fournie comme classe de base."
 
 #: ../Doc/library/venv.rst:136
 msgid "The returned env-builder is an object which has a method, ``create``:"
-msgstr ""
+msgstr "L'object env-builder renvoyé à une méthode ``create`` :"
 
 #: ../Doc/library/venv.rst:140
 msgid ""
